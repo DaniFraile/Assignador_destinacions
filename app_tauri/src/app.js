@@ -1,4 +1,4 @@
-// Asignador Destinaciones - Client Frontend
+// Assignador Destinacions - Client Frontend
 const invoke = window.__TAURI__ ? window.__TAURI__.invoke : null;
 
 // Llista inicial de candidats d'exemple
