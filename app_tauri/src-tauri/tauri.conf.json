@@ -1,0 +1,32 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "AsignadorBiparitario",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false
+    },
+    "bundle": {
+      "active": true,
+      "identifier": "com.asignador.dual",
+      "icon": []
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "title": "Asignador Biparitario de Plazas",
+        "width": 900,
+        "height": 700
+      }
+    ]
+  }
+}

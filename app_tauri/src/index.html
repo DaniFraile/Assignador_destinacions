@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Asignador Biparitario de Plazas</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #f8fafc; padding: 2rem; margin: 0; }
+    .card { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+    h1, h2 { color: #38bdf8; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, button, select { padding: 8px 12px; border-radius: 4px; border: 1px solid #334155; background: #0f172a; color: #fff; width: 100%; box-sizing: border-box; }
+    button { background: #0284c7; cursor: pointer; border: none; font-weight: bold; margin-top: 15px; }
+    button:hover { background: #0369a1; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; background: #334155; }
+    ul { list-style: none; padding: 0; }
+    li { background: #0f172a; padding: 10px; margin-bottom: 6px; border-radius: 4px; border-left: 4px solid #38bdf8; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🏛️ Asignador Biparitario de Plazas</h1>
+    <p>Paridad simultánea: 50% Hombres / 50% Mujeres y 50% Mossos / 50% Policía Local.</p>
+
+    <div class="grid">
+      <div>
+        <label>Total de Plazas Ofertadas:</label>
+        <input type="number" id="plazas" value="4" min="1">
+      </div>
+      <div>
+        <label>Modo de Ejecución:</label>
+        <select id="modo">
+          <option value="rust">Tauri / Rust Nativo</option>
+          <option value="django">API Django Remota</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="btnAsignar">Sortear y Asignar Plazas</button>
+  </div>
+
+  <div class="card" id="resultadoCard" style="display:none;">
+    <h2>Resultados de la Asignación</h2>
+    <div class="grid">
+      <div><strong>Plazas Cubiertas:</strong> <span id="resCubiertas">0</span></div>
+      <div><strong>Paridad Sexo:</strong> <span id="resSexo">-</span></div>
+      <div><strong>Paridad Cuerpo:</strong> <span id="resCuerpo">-</span></div>
+    </div>
+
+    <h3 style="margin-top: 20px;">Personas Asignadas:</h3>
+    <ul id="listaAsignados"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
