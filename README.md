@@ -1,4 +1,4 @@
-# Asignador Dual: Asignación Biparitaria de Plazas (Django + Tauri)
+# Asignador Destinaciones: Asignación Biparitaria de Plazas (Django + Tauri)
 
 Sistema de asignación de plazas aleatoria con **paridad simultánea en Sexo (50/50) y Cuerpo Policial (50/50 Mossos d'Esquadra y Policía Local)**, con cuotas mínimas y máximas flexibles por número absoluto o porcentaje.
 
